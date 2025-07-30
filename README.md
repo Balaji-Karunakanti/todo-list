@@ -26,5 +26,5 @@ It allows users to add, delete, and mark tasks as complete — with tasks saved 
 
 ---
 
-## 📂 Folder Structure
+
 
