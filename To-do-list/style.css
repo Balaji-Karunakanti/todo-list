@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f2f3f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.todo-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+.todo-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  flex-direction: row;
+}
+
+#itemInput {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+#addBtn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#addBtn:hover {
+  background-color: #43a047;
+}
+
+#itemList {
+  list-style: none;
+}
+
+#itemList li {
+  background-color: #f9f9f9;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+#itemList li:hover {
+  background-color: #eef1f5;
+}
+
+#itemList li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+#itemList span {
+  flex: 1;
+}
+
+#itemList button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+  margin-left: 10px;
+}
+
+#itemList button:hover {
+  background-color: #d93636;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  #addBtn {
+    width: 100%;
+  }
+
+  #itemInput {
+    width: 100%;
+  }
+
+  #itemList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #itemList button {
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+}
